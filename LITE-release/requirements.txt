@@ -1,0 +1,11 @@
+# Pinned versions of the environment used for all reported experiments.
+python==3.10.19
+torch==2.6.0+cu124
+torchvision==0.21.0+cu124
+numpy==2.2.6
+pandas==2.2.3
+thop==0.1.1
+transformers==4.49.0
+Pillow>=10.0
+requests>=2.31
+huggingface_hub>=0.28

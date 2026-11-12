@@ -1,0 +1,89 @@
+{
+  "dataset": "soybean",
+  "seed": 42,
+  "definitions": {
+    "images": "all image files in the split directory of the released split lists",
+    "paired": "images having both a caption (.txt) and a cached text feature (.npy) in the authors' local copy at experiment time; these are the samples actually loaded by the training/evaluation dataloader",
+    "unpaired": "images lacking caption or feature; skipped at load time"
+  },
+  "classes": [
+    "bacterial_blight",
+    "cercospora_leaf_blight",
+    "downey_mildew",
+    "frogeye",
+    "healthy",
+    "potassium_deficiency",
+    "soybean_rust",
+    "target_spot"
+  ],
+  "label_map": {
+    "bacterial_blight": 0,
+    "cercospora_leaf_blight": 1,
+    "downey_mildew": 2,
+    "frogeye": 3,
+    "healthy": 4,
+    "potassium_deficiency": 5,
+    "soybean_rust": 6,
+    "target_spot": 7
+  },
+  "counts_per_class": {
+    "train": {
+      "bacterial_blight": 339,
+      "cercospora_leaf_blight": 1119,
+      "downey_mildew": 456,
+      "frogeye": 1078,
+      "healthy": 1142,
+      "potassium_deficiency": 724,
+      "soybean_rust": 1139,
+      "target_spot": 757
+    },
+    "val": {
+      "bacterial_blight": 48,
+      "cercospora_leaf_blight": 160,
+      "downey_mildew": 65,
+      "frogeye": 154,
+      "healthy": 163,
+      "potassium_deficiency": 103,
+      "soybean_rust": 163,
+      "target_spot": 108
+    },
+    "test": {
+      "bacterial_blight": 97,
+      "cercospora_leaf_blight": 319,
+      "downey_mildew": 131,
+      "frogeye": 308,
+      "healthy": 327,
+      "potassium_deficiency": 207,
+      "soybean_rust": 325,
+      "target_spot": 216
+    }
+  },
+  "counts": {
+    "train": {
+      "images": 6754,
+      "paired": 6754,
+      "unpaired": 0
+    },
+    "val": {
+      "images": 964,
+      "paired": 964,
+      "unpaired": 0
+    },
+    "test": {
+      "images": 1930,
+      "paired": 1930,
+      "unpaired": 0
+    }
+  },
+  "totals": {
+    "train": 6754,
+    "val": 964,
+    "test": 1930
+  },
+  "totals_paired": {
+    "train": 6754,
+    "val": 964,
+    "test": 1930
+  },
+  "split_rule": "Soybean: no official split exists; all text-paired samples pooled and split stratified 70/10/20 into TRAIN/VAL/TEST (seed 42). PlantDoc: the official test folder is used as TEST unchanged; the remaining images are split stratified 90/10 into TRAIN/VAL (seed 42). Split lists reflect the completed caption set (every listed image is text-paired)."
+}
